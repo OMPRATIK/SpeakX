@@ -11,20 +11,21 @@ https://github.com/user-attachments/assets/756c724b-bbd2-4f36-b0fe-f2adb1a00b63
 git clone https://github.com/OMPRATIK/SpeakX
 ```
 - Setup environment variables
-   - Create `.env` in the server
+   - Create `.env` in the `server` folder
    - ```env
      MONGO_URI=<mongodb atlas uri>
      PROXY_PORT = 8080
      EXPRESS_PORT = 3000
      GRPC_PORT = 4000
-     NODE_ENV=development
+     NODE_ENV= development / production
      ```
 - Install all dependencies from root directory
    - There is `package.json` which has all the scripts
    - ```bash
       npm run install-deps
       ```
-   - This installs all the client and server dependencies
+     `This installs all the client and server dependencies`
+   - Or you can individually install dependencies in the `speakx` client folder and `server` folder using `npm install`
 - Run the frontend dev server from the root
      - ```bash
        npm run run-dev-client
@@ -34,4 +35,25 @@ git clone https://github.com/OMPRATIK/SpeakX
        cd speakx
        npm run dev
        ```
-    
+- Run the backend dev server from the root
+     - ```bash
+       npm run run-dev-server
+       ```
+     - or just run directly from client `speakX` directory
+     - ```bash
+       cd server
+       npm run dev
+       ```
+## Technologies used
+- ### Frontend
+   - React
+   - Typescript
+   - Tailwind CSS
+   - @protobuf-ts/plugin - generate client typescript code from proto file
+   - @protobuf-ts/grpcweb-transport - To connect to proxy
+- ### Backend
+   - Node js
+   -  @grpc/grpc-js - setup grpc server
+   -  @grpc/proto-loader - dynamically loads proto file on the server
+   -  express - to serve frontend
+   -  @grpc-web/proxy - to create a proxy to the grpc server
