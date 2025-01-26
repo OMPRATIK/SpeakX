@@ -47,7 +47,9 @@ server.addService(grpcObject.question.QuestionService.service, {
 });
 
 proxy({
-  target: `http://localhost:${grpcPort}`,
+  target: isProduction
+    ? `https://speakx-8yjv.onrender.com:${grpcPort}`
+    : `http://localhost:${grpcPort}`,
 }).listen(proxyPort);
 
 console.log(`Proxy server running on port ${proxyPort}`);
