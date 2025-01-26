@@ -5,6 +5,10 @@ This is a responsive full-stack application that demonstrates a robust search fu
 ## Demo
 https://github.com/user-attachments/assets/756c724b-bbd2-4f36-b0fe-f2adb1a00b63
 
+## Overview
+![image](https://github.com/user-attachments/assets/4aa90644-bb2d-41b9-a120-9aa306b09e7b)
+Browsers can not directly communicate with grpc servers as they internally use http 2 for communication . Modern browsers still don't have access to internals of http 2. So we need to setup a proxy to forward and parse the request like `envoy` or a proxy server at the `backed`.
+
 ## How to set up the project locally ?
 - Clone the project
 ```bash
@@ -30,7 +34,7 @@ git clone https://github.com/OMPRATIK/SpeakX
      - ```bash
        npm run run-dev-client
        ```
-     - or just run directly from client `speakX` directory
+     > or just run directly from client `speakX` directory
      - ```bash
        cd speakx
        npm run dev
@@ -39,7 +43,7 @@ git clone https://github.com/OMPRATIK/SpeakX
      - ```bash
        npm run run-dev-server
        ```
-     - or just run directly from `server` directory
+     > or just run directly from `server` directory
      - ```bash
        cd server
        npm run dev
@@ -47,8 +51,9 @@ git clone https://github.com/OMPRATIK/SpeakX
 ## Technologies used
 - ### Frontend
    - React
-   - Typescript
+   - Typescript - type safety
    - Tailwind CSS
+   - react-paginate - to create pagination
    - @protobuf-ts/plugin - generate client typescript code from proto file
    - @protobuf-ts/grpcweb-transport - To connect to proxy
 - ### Backend
