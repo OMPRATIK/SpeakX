@@ -39,7 +39,7 @@ git clone https://github.com/OMPRATIK/SpeakX
      - ```bash
        npm run run-dev-server
        ```
-     - or just run directly from client `speakX` directory
+     - or just run directly from `server` directory
      - ```bash
        cd server
        npm run dev
