@@ -36,6 +36,7 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../speakx/dist")));
   app.get("*all", (req, res) => {
+    console.log("Production mode");
     res.sendFile(path.join(__dirname, "../speakx", "dist", "index.html"));
   });
 }
@@ -44,7 +45,7 @@ server.addService(grpcObject.question.QuestionService.service, {
   GetQuestions: getQuestions,
 });
 
-proxy({ target: "http://localhost:4000" }).listen(proxyPort);
+proxy({ target: `http://localhost:${grpcPort}` }).listen(proxyPort);
 console.log(`Proxy server running on port ${proxyPort}`);
 
 const start = async () => {
