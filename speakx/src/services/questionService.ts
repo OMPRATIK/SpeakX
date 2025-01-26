@@ -9,6 +9,7 @@ type request = {
 };
 
 const mode = import.meta.env.MODE;
+// const proxyUrl = import.meta.env.PROXY_URL;
 
 const transport = new GrpcWebFetchTransport({
   baseUrl:

@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm install --prefix server && npm install --prefix speakx && npm run build --prefix speakx",
+    "build": "npm install && npm install --prefix server && npm install --prefix speakx && npm run build --prefix speakx",
     "start": "npm run start --prefix server",
+    "install-deps": "npm install --prefix server && npm install --prefix speakx",
     "run-dev-server": "npm run dev --prefix server",
     "run-dev-client": "npm run dev --prefix speakx"
   },
