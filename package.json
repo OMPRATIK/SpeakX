@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "npm install --prefix server && npm install --prefix speakx && npm run build --prefix speakx",
-    "start": "npm run start --prefix server"
+    "start": "npm run start --prefix server",
+    "run-dev-server": "npm run dev --prefix server",
+    "run-dev-client": "npm run dev --prefix speakx"
   },
   "keywords": [],
   "author": "",

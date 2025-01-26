@@ -29,11 +29,12 @@ const proxyPort = process.env.PROXY_PORT || 8080;
 const grpcPort = process.env.GRPC_PORT || 4000;
 
 const __dirname = path.resolve();
+const isProduction = process.env.NODE_ENV === "production";
 
 app.use(cors({ exposedHeaders: ["grpc-status", "grpc-message"] }));
 app.use(express.json());
 
-if (process.env.NODE_ENV === "production") {
+if (isProduction) {
   app.use(express.static(path.join(__dirname, "../speakx/dist")));
   app.get("*all", (req, res) => {
     console.log("Production mode");
@@ -45,7 +46,10 @@ server.addService(grpcObject.question.QuestionService.service, {
   GetQuestions: getQuestions,
 });
 
-proxy({ target: `http://localhost:${grpcPort}` }).listen(proxyPort);
+proxy({
+  target: `http://localhost:${grpcPort}`,
+}).listen(proxyPort);
+
 console.log(`Proxy server running on port ${proxyPort}`);
 
 const start = async () => {
