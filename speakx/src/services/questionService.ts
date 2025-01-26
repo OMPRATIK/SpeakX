@@ -13,9 +13,9 @@ const mode = import.meta.env.MODE;
 
 const transport = new GrpcWebFetchTransport({
   baseUrl:
-    mode === "development"
-      ? "http://localhost:8080"
-      : "https://speakx-8yjv.onrender.com:8080",
+    mode === "production"
+      ? "https://speakx-8yjv.onrender.com:8080"
+      : "http://localhost:8080",
 });
 
 const client = new QuestionServiceClient(transport);
