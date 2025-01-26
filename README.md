@@ -24,7 +24,7 @@ git clone https://github.com/OMPRATIK/SpeakX
    - ```bash
       npm run install-deps
       ```
-     `This installs all the client and server dependencies`
+     >This installs all the client and server dependencies
    - Or you can individually install dependencies in the `speakx` client folder and `server` folder using `npm install`
 - Run the frontend dev server from the root
      - ```bash
