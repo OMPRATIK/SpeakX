@@ -8,8 +8,13 @@ type request = {
   page: number;
 };
 
+const mode = import.meta.env.MODE;
+
 const transport = new GrpcWebFetchTransport({
-  baseUrl: "http://localhost:8080",
+  baseUrl:
+    mode === "development"
+      ? "http://localhost:8080"
+      : "https://speakx-8yjv.onrender.com:8080",
 });
 
 const client = new QuestionServiceClient(transport);
