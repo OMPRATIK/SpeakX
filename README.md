@@ -71,8 +71,6 @@ git clone https://github.com/OMPRATIK/SpeakX
    -  @grpc/proto-loader - dynamically loads proto file on the server
    -  express - to serve frontend
    -  @grpc-web/proxy - to create a proxy to the grpc server
-## UI
-![image](https://github.com/user-attachments/assets/f9d117de-29e7-4f09-8fb3-2eb380af3f5c)
 
 ### Conclusion
 The project successfully showcases a full-stack application built with a focus on robust backend integration and a seamless frontend experience. By leveraging gRPC, MongoDB, and React, the application achieves efficient search functionality, responsive UI, and effective communication between client and server. Key features like pagination, question type filtering, and clean design highlight the project's usability and attention to user experience.
