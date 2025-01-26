@@ -8,15 +8,15 @@ https://github.com/user-attachments/assets/756c724b-bbd2-4f36-b0fe-f2adb1a00b63
 ## Overview
 ![image](https://github.com/user-attachments/assets/4aa90644-bb2d-41b9-a120-9aa306b09e7b)
 
--Browsers can not directly communicate with grpc servers as they internally use http 2 for communication . Modern browsers still don't have access to internals of http 2 and rely on http 1. So we need to setup a proxy to forward and parse the request like `envoy` or a proxy server at the `backed`.
--Also the use of `protocol buffers` as a data serialization method which is more efficient and faster than something like a `JSON`.
+- Browsers can not directly communicate with grpc servers as they internally use http 2 for communication . Modern browsers still don't have access to internals of http 2 and rely on http 1. So we need to setup a proxy to forward and parse the request like `envoy` or a proxy server at the `backed`.
+- Also the use of `protocol buffers` as a data serialization method which is more efficient and faster than something like a `JSON`.
 
 ## Key Features
--Load is handled by the server that means, large amount of data is not set to the browser with the help of pagination.
--Advance filtering options, selecting no of responses per page, filter based on type of questions, pagination and advance search with mongo DB `text` option
--Users can see the answers and blocks for `ANAGRAM` questions and also see the options for `MCQ` type questions.
--Implemented debouncing to reduce the frequent access to the server.
--Responsive, clean UI and good user experience 
+- Load is handled by the server that means, large amount of data is not set to the browser with the help of pagination.
+- Advance filtering options, selecting no of responses per page, filter based on type of questions, pagination and advance search with mongo DB `text` option
+- Users can see the answers and blocks for `ANAGRAM` questions and also see the options for `MCQ` type questions.
+- Implemented debouncing to reduce the frequent access to the server.
+- Responsive, clean UI and good user experience 
 
 ## How to set up the project locally ?
 - Clone the project
