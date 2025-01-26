@@ -19,5 +19,19 @@ git clone https://github.com/OMPRATIK/SpeakX
      GRPC_PORT = 4000
      NODE_ENV=development
      ```
-     
-
+- Install all dependencies from root directory
+   - There is `package.json` which has all the scripts
+   - ```bash
+      npm run install-deps
+      ```
+   - This installs all the client and server dependencies
+- Run the frontend dev server from the root
+     - ```bash
+       npm run run-dev-client
+       ```
+     - or just run directly from client `speakX` directory
+     - ```bash
+       cd speakx
+       npm run dev
+       ```
+    
