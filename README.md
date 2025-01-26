@@ -11,7 +11,7 @@ https://github.com/user-attachments/assets/756c724b-bbd2-4f36-b0fe-f2adb1a00b63
 git clone https://github.com/OMPRATIK/SpeakX
 ```
 - Setup environment variables
-   - Create .env in the server
+   - Create `.env` in the server
    - ```env
      MONGO_URI=<mongodb atlas uri>
      PROXY_PORT = 8080
