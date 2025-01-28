@@ -32,6 +32,9 @@ git clone https://github.com/OMPRATIK/SpeakX
      GRPC_PORT = 4000
      NODE_ENV= development / production
      ```
+   - Important ! In speakx folder that is the `cleint` folder in `src/services/questionService.ts` If you have changed the proxy server port on env file, change the baseUrl as per in the transport object which has a default port of 8080 like in the .env file
+   ![image](https://github.com/user-attachments/assets/7d6c486d-0556-4bfc-b018-84e303490a12)
+
 - Install all dependencies from root directory
    - There is `package.json` which has all the scripts
    - ```bash
